@@ -1,0 +1,56 @@
+.now-info {
+    display: flex;
+}
+
+.sub-tab {
+    display: flex;
+}
+
+.tap-btn-wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.tap-btn-wrap button {
+    border-radius: 1rem;
+}
+
+
+
+
+/* 청년정책 수립 */
+
+/* 왼쪽 배경이미지로 아이콘 - 모바일 버전 생각해보기 뒤에.. */
+.cont-info {
+    padding: 40px 36px 40px 140px;
+    background-color: #F0F0F0;
+    margin-bottom: 64px;
+}
+
+#main dt {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+#main dd {
+    margin: 0;
+}
+
+.build-guide-wrap {
+    
+}
+
+.build-guide-wrap dl {
+    padding: 24px 20px;
+    border: 1px solid #DCDBDC;
+    border-radius: 10px;
+    margin-top: 50px;
+    position: relative;
+}
+
+/* .build-guide-wrap button {
+    
+} */
+
