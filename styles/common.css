@@ -8,7 +8,7 @@
 
 /* Reset style */ /* 기본값 초기화 - 여기서만 태그 선택자 허용 */
 * { box-sizing: border-box; }
-body, h1, h2, h3, h4, p, ul, ol, li, button, a { margin: 0; padding: 0; }
+body, h1, h2, h3, h4, p, ul, ol, li, button, a, dl, dd, fieldset { margin: 0; padding: 0; }
 h1, h2, h3, h4 { font-size: inherit; }
 ul, ol { list-style: none; }
 a { text-decoration: none; color: inherit; }
@@ -54,6 +54,7 @@ h1 {
     font-weight: 700;
     line-height: 1.2;
     color: #111;
+    margin-bottom: 48px;
 }
 h2 {
     font-size: 25px;
@@ -67,6 +68,7 @@ h3 {
     line-height: 1.4;
     color: #111;
 }
+
 a { color:#1D56BC; line-height: 1.4; font-size: 15px; }
 .txt-link { color:#1d1d1d; }
 a:hover { color:#1D56BC; text-decoration: underline; }
@@ -81,7 +83,13 @@ input {
     color: #333;
 }
 
-button {
+/* 아이콘/이미지 사이즈 */
+img {width: 100%; height: 100%; object-fit: cover; align-items: center;}
+.icon-f {width: 20px; height: 20px;}
+
+
+/* 메인버튼 / 서브버튼 / 온 오프 버튼 따로 넣어야 할 듯 */
+button { 
     padding: 10px 20px;
     border-radius: 4px;
     font-size: 16px;
@@ -96,8 +104,6 @@ button:hover {
 }
 
 /* 폰트 */
-
-
 .txt-caption {
     font-size: 14px;
     font-weight: 400;
@@ -106,6 +112,7 @@ button:hover {
 }
 
 /* 3. 레이아웃 클래스 (공통 사용) */
+#main { padding: 0 15px; }
 .wrapper { width: 100%; min-width: 320px; }
 .container { width: 100%; }
 .inner { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; background-color: #ececec; }
@@ -127,8 +134,14 @@ button:hover {
     min-width: 320px;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 650px){
     .blind-m { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
+
+    /* 꿀팁 정보 영역 */
+    .cont-info {
+        padding: 140px 36px 40px 40px;
+    }
+
 }
 
 @media screen and (min-width: 1024px){ /* 데스크탑 min-width가 다를 수 있음 */
@@ -137,53 +150,66 @@ button:hover {
     }
 }
 
-/* 서브 탭 */
+/* 메인 탭 */
 .main-tab {}
+
+/* 서브 탭 - 지혜 */
 .sub-tab {}        
-.sub-tab-btn {}
+.sub-tab .prev {}
+.sub-tab .next {}
 
-/* 꿀팁 (각 페이지 상단 정보) */
-.cont-info {}
+/* 꿀팁 (각 페이지 상단 정보) - 지혜 */
+/* 왼쪽 배경이미지로 아이콘 - 모바일 버전 생각해보기 뒤에.. */
+.cont-info {
+    padding: 40px 36px 40px 140px;
+    background-color: #F0F0F0;
+    margin-bottom: 64px;
+}
 
-/* 페이지 번호 영역 */
-.page-num-box {}
+/* 서브페이지 맨 위 네비 - 윤진 */
+.sub-nav {}
 
-/* 페이지 번호 */
-.page-num {}
+/* 버튼 - 윤진 */
+    /* 메인버튼 */
+    .main-btn {}
+    /* 서브버튼 */
+    .sub-btn {}
+/* -- */
 
-/* 이전 다음 */
-.page-prev {}
-.page-next {}
+/* 페이지 번호 - 다슬 */
+    .page-num-box {}
 
-/* 맨앞 맨뒤 */
-.page-first {}
-.page-last {}
+    /* 페이지 번호 온오프 */
+    .page-num-box .num {}
+    .page-num-box .num.on {}
 
-/* 폼영역 */
-.sub-search-area {}
+    /* 이전 다음 */
+    .page-num-box .prev {}
+    .page-num-box .next {}
 
-.sub-search-category {}
-.sub-search-keyword {}
-.sub-search-input {}
+    /* 맨앞 맨뒤 */
+    .page-num-box .first {}
+    .page-num-box .last {}
+/* -- */
 
-.sub-search-date-start {}
-.sub-search-date-end {}
+/* 폼영역 - 지수 */
+.sub-search-area{}
 
-.search-submit {}
-.search-reset {}
+.sub-search-area .keyword {}
+.sub-search-area .input {}
 
-/* 앨범 목록 */
-.albam-list {}
-.albam-item {}
+.sub-search-area .submit {}
+.sub-search-area .reset {}
 
-.albam-img-mask {}
-.albam-img-mask img {}
+/* 앨범 목록 - 지혜 */
+.album-list {
+    /* 그리드 갭 넣으셈 */
+    
 
-.albam-cont {}
-
-.albam-top {}
-.albam-top-cate {}
-.albam-top-share {}
-.albam-info {}
-.albam-tit {}
-.albam-meta {}
+}
+.album-list .item {
+    /* 이벤트 빼고 생각하셈 */
+    padding: 20px;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+}
