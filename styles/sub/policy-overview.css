@@ -11,7 +11,7 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     width: 100%;
-    padding: 30px 0;
+    padding: 16px 12px;
 }
 
 .tap-btn-wrap button {
@@ -92,6 +92,16 @@ table td li::before {
 
 
 @media screen and (max-width: 650px){
+    .tap-btn-wrap {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tap-btn-wrap button {
+        min-width: 165px;
+        padding: 12px 8px;
+    }
+    
+
     /* 꿀팁 정보 영역 */
     .cont-info {
         padding: 140px 36px 40px 40px;

@@ -7,3 +7,30 @@
     margin: 0;
 }
 
+
+/* 검색 폼 */
+fieldset {
+    padding: 32px 24px;
+    margin: 40px 0;
+    background-color: #F0F0F0;
+    border: 1px solid #D0D5DD;
+    border-radius: 10px;
+}
+
+fieldset dd {
+    display: none;
+}
+
+fieldset dt {
+    background-color: #fff;
+    border: 1px solid #D0D5DD;
+    border-radius: 5px;
+}
+
+.area {
+    display: flex;
+}
+
+.area-search {
+    padding: 5px 50px 10px 5px;
+}

@@ -1,6 +1,64 @@
-dd { margin: 0; }
+/* 구성체계 */
+.committee-wrap {
+    border: 1px solid #d0d5dd;
+    border-radius: 10px;
+    margin: 40px 0;
+}
 
+.detail-wrap {
+    padding: 12px 22px;
+}
+
+.detail-wrap dt {
+    font-weight: 700;
+}
+
+.detail-wrap
+
+.committee-wrap .top-area {
+    padding: 12px 22px;
+    background-color: gray;
+    border-radius: 10px 10px 0 0;
+}
+
+.committee-wrap .top-area dt {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+/* 청년정책조정위원회 */
 .organization {
     background-color: #F0F0F0;
     padding: 24px 20px;
+    border-radius: 10px;
+}
+
+h3 {
+    /* padding: 24px 20px; */
+    width: 250px;
+    height: 69px;
+    background-color: aqua;
+    text-align: center;
+    line-height: 69px;
+    border-radius: 50px;
+}
+
+.organization-group {
+    padding: 20px;
+    border: 1px solid #d0d5dd;
+    border-radius: 10px;
+}
+
+.organization-group li::before {
+    content: "· ";
+}
+
+.private li {
+    display: flex; 
+    
+}
+
+.private strong {
+    display: inline-block;
+    width: 93px;
 }
