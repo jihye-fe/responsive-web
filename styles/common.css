@@ -134,26 +134,7 @@ button:hover {
     min-width: 320px;
 }
 
-@media screen and (max-width: 650px){
-    .blind-m { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
 
-    /* 꿀팁 정보 영역 */
-    .cont-info {
-        padding: 140px 36px 40px 40px;
-    }
-
-    /* .album-list {
-        grid-template-columns: repeat(1, 1fr);
-    } */
-}
-
-@media screen and (min-width: 1024px){ /* 데스크탑 min-width가 다를 수 있음 */
-    body { 
-        font-size: 18px;
-    }
-
-    .inner { padding: 0; }
-}
 
 /* 메인 탭 */
 .main-tab {}
@@ -200,6 +181,7 @@ button:hover {
     padding: 40px 36px 40px 140px;
     background-color: #F0F0F0;
     margin-bottom: 64px;
+    border-radius: 10px;
 }
 
 /* 서브페이지 맨 위 네비 - 윤진 */
@@ -249,4 +231,26 @@ button:hover {
     padding: 20px;
     border: 1px solid #d9d9d9;
     border-radius: 10px;
+}
+
+
+@media screen and (max-width: 650px){
+    .blind-m { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
+
+    /* 꿀팁 정보 영역 */
+    .cont-info {
+        padding: 140px 36px 40px 40px;
+    }
+
+    .album-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px){ /* 데스크탑 min-width가 다를 수 있음 */
+    body { 
+        font-size: 18px;
+    }
+
+    .inner { padding: 0; }
 }

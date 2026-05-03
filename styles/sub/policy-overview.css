@@ -15,7 +15,7 @@
 }
 
 .tap-btn-wrap button {
-    border-radius: 1rem;
+    border-radius: 10px;
 }
 
 /* 표 */
@@ -53,6 +53,7 @@ table .table-info {
     text-decoration: underline;
 }
 
+/* 가상요소 다시 빼기로 했는데 넣는 게 나을 것 같다고 말하기 */
 table td li::before {
     content: "· ";
 }
@@ -97,7 +98,8 @@ table td li::before {
     }
 
     .tap-btn-wrap button {
-        min-width: 165px;
+        max-width: 170px;
+        min-width: 137px;
         padding: 12px 8px;
     }
     
@@ -130,5 +132,9 @@ table td li::before {
         display: block;
     }
 
+    .support-target {
+        display: flex;
+        align-items: flex-start;
+    }
 
 }

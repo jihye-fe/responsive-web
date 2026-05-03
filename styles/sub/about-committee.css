@@ -1,3 +1,7 @@
+.now-info {
+    display: flex;
+}
+
 /* 구성체계 */
 .committee-wrap {
     border: 1px solid #d0d5dd;
@@ -13,12 +17,22 @@
     font-weight: 700;
 }
 
-.detail-wrap
+.committee-wrap .detail-wrap .etc-detail {
+    padding: 24px;
+    margin: 24px 0 32px 0;
+    background-color: #f6f5f6;
+    border-radius: 10px;
+}
 
-.committee-wrap .top-area {
-    padding: 12px 22px;
-    background-color: gray;
-    border-radius: 10px 10px 0 0;
+.committee-wrap .detail-wrap dt {
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+.committee-wrap .detail-wrap span {
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 5px;
 }
 
 .committee-wrap .top-area dt {
@@ -26,11 +40,27 @@
     font-size: 24px;
 }
 
+.committee-wrap .top-area {
+    padding: 12px 22px;
+    background-color: #D0D5DD;
+    border-radius: 10px 10px 0 0;
+}
+
 /* 청년정책조정위원회 */
+.organization-wrap {
+    margin: 64px 0;
+}
+
 .organization {
     background-color: #F0F0F0;
     padding: 24px 20px;
     border-radius: 10px;
+    text-align: center;
+}
+
+.organization dt {
+    font-weight: 700;
+    font-size: 19px;
 }
 
 h3 {
@@ -53,12 +83,31 @@ h3 {
     content: "· ";
 }
 
-.private li {
+.organization-group.vice {
+    display: flex;
+    justify-content: space-between;
+}
+
+.organization-group.country li {
+    font-weight: 700;
+}
+
+.organization-group.country, .organization-group.member {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.member li {
     display: flex; 
     
 }
 
-.private strong {
+.member strong {
     display: inline-block;
     width: 93px;
+}
+
+@media screen and (max-width: 650px){
+
 }
