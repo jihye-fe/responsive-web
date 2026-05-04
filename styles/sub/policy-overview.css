@@ -96,21 +96,24 @@ table td li::before {
 }
 
 
-/* 모바일~테블릿 */
-@media screen and (max-width: 360px){
+/* 테블릿~pc */
+@media screen and (min-width: 650px){
     .tap-btn-wrap {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    table .table-division {
+        display: none;
+    }
 }
 
-/* 테블릿~pc */
+/* 모바일~테블릿 */
 @media screen and (max-width: 650px){
     .tap-btn-wrap {
         grid-template-columns: repeat(2, 1fr);
     }
 
     .tap-btn-wrap button {
-        max-width: 170px;
         min-width: 137px;
         padding: 12px 8px;
     }
@@ -149,4 +152,11 @@ table td li::before {
         align-items: flex-start;
     }
 
+}
+
+/* pc */
+@media screen and (min-width: 1280px){
+    .tap-btn-wrap {
+        grid-template-columns: repeat(6, 1fr);
+    }
 }
