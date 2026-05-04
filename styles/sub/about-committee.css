@@ -1,3 +1,11 @@
+.sub-tab {
+    padding: 0;
+}
+
+.sub-tab ul li {
+    width: 50%;
+}
+
 /* 구성체계 */
 .committee-wrap {
     border: 1px solid #d0d5dd;
@@ -60,11 +68,6 @@
     font-size: 19px;
 }
 
-.organization {
-
-}
-
-
 #main h3 {
     /* padding: 24px 20px; */
     width: 250px;
@@ -96,7 +99,8 @@ h3.tit-sub3 { background-color: #0074E5; }
 
 .organization-group.vice {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around;
     z-index: -1;
 }
 
@@ -104,18 +108,15 @@ h3.tit-sub3 { background-color: #0074E5; }
     font-weight: 700;
 }
 
-/* .organization-group.country, .organization-group.member {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-} */
-
-.organization-group {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.organization-group.country, .organization-group.member {
+    border: 1px solid #d0d5dd;
+    border-radius: 10px;
+    margin-top: 35px;
 }
 
+.organization-group li {
+    margin-bottom: 20px;
+}
 
 
 .member li {
@@ -136,7 +137,15 @@ h3.tit-sub3 { background-color: #0074E5; }
 }
 
 
+/* 모바일~테블릿 */
+@media screen and (max-width: 360px){
 
-@media screen and (max-width: 650px){
+}
 
+/* 테블릿~pc */
+@media screen and (min-width: 650px){
+    .sub-bottom-group {
+        display: flex;
+        justify-content: space-between;
+    }   
 }

@@ -138,41 +138,49 @@ button:hover {
 /* 메인 탭 */
 .main-tab {}
 
-/* 서브 탭 - 지혜 */
-/* .sub-tab {
-    display: flex;
-    align-items: center;    
-} */
+/* 서브 탭 - 다슬 */
+.sub-tab {
+    position: relative;
+    padding: 0 30px;  
+}
 
 .sub-tab ul { /* 태그명씀 */
     display: flex;
     overflow: hidden;
-    width: 100%;
 }
 
 .sub-tab ul li {
-    padding: 10px 30px;
+    position: relative;
+    flex-shrink: 0;
     width: 100%;
-    border-bottom: 5px solid #E4E7EB;
+    padding: 10px 0;
     text-align: center;
+    border-bottom: 5px solid #E4E7EB;
 }
 
-.sub-tab .tab-on {
-    border-bottom: 5px solid #003675;
-    color: #003675;
-    font-weight: 700;
+.sub-tab ul li a { font-weight: 700; color:#666;}
+
+.sub-tab ul li:hover::after {
+  transform: scaleX(1); /* 호버 시 나타남 */
 }
 
-.sub-tab .prev, .sub-tab .next {
-    border-radius: 100%;
-    width: 32px;
-    height: 32px;
+.sub-tab .on { border-bottom: 5px solid #003675; }
+.sub-tab .on a {color: #003675;}
+
+.sub-tab .prev {position: absolute; left: 0; top: 10px }
+.sub-tab .next {position: absolute; right: 0; top: 10px;}
+
+@media (min-width:360px){
+    .sub-tab ul .list { width: 50% }
 }
 
-.sub-tab .prev {
-    
+@media (min-width:650px){
+    .sub-tab ul .list { width: 33.33% }
 }
-.sub-tab .next {}
+
+@media (min-width:1280px){
+    .sub-tab ul .list { width: 25% }
+}
 
 /* 꿀팁 (각 페이지 상단 정보) - 지혜 */
 /* 왼쪽 배경이미지로 아이콘 - 모바일 버전 생각해보기 뒤에.. */
