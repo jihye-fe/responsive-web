@@ -135,7 +135,6 @@ button:hover {
 }
 
 
-
 /* 메인 탭 */
 .main-tab {}
 
@@ -185,29 +184,74 @@ button:hover {
 }
 
 /* 서브페이지 맨 위 네비 - 윤진 */
-.sub-nav {}
+.sub-nav {
+    display: flex;
+    gap: 10px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.sub-nav a {
+    text-decoration: underline; /*글자 아래 밑줄*/
+    text-underline-offset: 5px; /* 글자와 밑줄 사이의 간격 */
+    color: #1D1D1D;
+}
+a:hover{
+    text-decoration: none;
+}
+.sub-nav li:last-child {
+    font-weight: bold;
+}
 
 /* 버튼 - 윤진 */
     /* 메인버튼 */
-    .main-btn {}
+    .main-btn {
+        width: 124px;
+        height: 40px;
+        padding: 8px 16px;
+        background-color: #246BE0;
+        color: #fff;
+    }
+    .main-btn:hover {
+        text-decoration: underline;
+        color: #fff;
+    }
+    .main-btn a { color: #fff; }
     /* 서브버튼 */
-    .sub-btn {}
+    .sub-btn {
+        width: 100px;
+        height: 40px;
+        padding: 0px 8px;
+        background-color: #EFF5FF;
+        color: #246BE0;
+        border: 1px solid #246BE0;
+    }
+
+    .sub-btn:hover {
+        text-decoration: underline;
+        color: #246BE0;
+    }
 /* -- */
 
 /* 페이지 번호 - 다슬 */
-    .page-num-box {}
+    .page-num-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+    }
+    .page-num-box button {
+        width: 40px; 
+        height: 40px;
+        border-radius: 6px;
+        padding: 0;
+        color: #333;
+        background-color: transparent;
+    }
 
     /* 페이지 번호 온오프 */
-    .page-num-box .num {}
-    .page-num-box .num.on {}
-
-    /* 이전 다음 */
-    .page-num-box .prev {}
-    .page-num-box .next {}
-
-    /* 맨앞 맨뒤 */
-    .page-num-box .first {}
-    .page-num-box .last {}
+    .page-num-box .num.on {
+        background-color: #E1EBFF;
+    }
 /* -- */
 
 /* 폼영역 - 지수 */
@@ -247,10 +291,62 @@ button:hover {
     }
 }
 
-@media screen and (min-width: 1024px){ /* 데스크탑 min-width가 다를 수 있음 */
+@media screen and (min-width: 1280px){ /* 데스크탑 min-width가 다를 수 있음 */
     body { 
         font-size: 18px;
     }
 
     .inner { padding: 0; }
+
+    /* 사이드/메인 레이아웃 */
+    .container {
+        display: flex;
+    }
+
+    /* 크기만 #aside가 잡고(inner와 같은 역할) 디자인은 안에 박스에서 */
+    #aside {
+        width: 292px;
+    }
+
+    .aside-wrap {
+        background-color: #fff;
+        border-radius: 10px;
+        /* border: 1px solid black; */
+        box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    #main {
+        padding: 0 20px;
+        flex: 1;
+    }
+
+    #aside h1 {
+        padding: 65px 0;
+        text-align: center;
+        background-image: linear-gradient(to left, #FEE4FF, #E1EBFF);
+        border-radius: 10px 10px 0 0 ;
+        color: #333;
+        margin: 0;
+    }
+
+    #aside ul {
+        padding: 24px;
+        font-weight: 700;
+    }
+
+    #aside ul li {
+        padding: 18px 8px;
+        font-size: 17px;
+        /* background-color: beige; */
+        border-bottom: 1px solid #D0D5DD;
+    }
+
+    #aside ul .on {
+        color: #003675; /* 비활성화/활성화 상단에서 수정 */
+        border-bottom: 3px solid #003675;
+    }
+
+    #aside li:hover {
+        background-color: #E1EBFF;
+    }
 }
