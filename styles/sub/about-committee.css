@@ -168,5 +168,15 @@ h3.tit-sub3 { background-color: #0074E5; }
     .sub-bottom-group {
         display: flex;
         justify-content: space-between;
-    }   
+    }
+
+    .organization-wrap .organization {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* .organization-wrap  */
+
+
 }
