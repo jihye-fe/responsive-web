@@ -1,4 +1,4 @@
-#main dt {
+.album-list dt {
     font-weight: 700;
     margin-bottom: 10px;
 }
@@ -16,6 +16,10 @@
     margin-top: 10px;
 }
 
+.banner-btn {
+    background-color: #ccc;
+}
+
 .banner-btn button {
     width: 100%;
     height: 56px;
@@ -24,7 +28,6 @@
 /* 검색 폼 */
 fieldset {
     padding: 32px 24px;
-    margin: 40px 0;
     background-color: #F0F0F0;
     border: 1px solid #D0D5DD;
     border-radius: 10px;
@@ -34,11 +37,11 @@ fieldset dd {
     display: none;
 }
 
-fieldset dt {
+/* fieldset dt {
     background-color: #fff;
     border: 1px solid #D0D5DD;
     border-radius: 5px;
-}
+} */
 
 .area {
     display: flex;
@@ -75,32 +78,45 @@ fieldset dt {
 }
 
 .album-list .item dl dd span {
-    display: inline-block;
-    font-weight: 700;
-    width: 100px;
+    display: block;
+    width: 70px;
 }
 
+.album-list .item .tit {
+    font-weight: 700;
+}
+
+/* 바로가기 버튼 */
 .album-list .item p {
     text-align: center;
+    width: 100%;
 }
 
-/* sos !! 주소 부분 말줄임 하려고 했는데
-적용이 안 되는 건지.. */
-/* .album-list .test {
+.album-list .item p button {
+    width: 100%;
+}
+
+/* 말줄임 */
+.album-list .address {
+    display: flex;
+}
+.album-list .address .detail {
     overflow: hidden;
     line-clamp: 2;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
-} */
+    flex: 1;
+    height: 52px;
+}
 
 
 /* 모바일~테블릿 */
-@media screen and (max-width: 360px){
+@media screen and (max-width: 650px){
 
 }
 
 /* 테블릿~pc */
-@media screen and (max-width: 650px){
+@media screen and (min-width: 650px){
 
 }

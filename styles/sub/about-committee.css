@@ -14,7 +14,14 @@
 }
 
 .detail-wrap {
-    padding: 12px 22px;
+    padding: 44px
+}
+
+.detail-wrap dl dt .num {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: blue;
 }
 
 .detail-wrap dt {
@@ -31,6 +38,10 @@
 .committee-wrap .detail-wrap dt {
     margin-bottom: 20px;
     font-size: 19px;
+}
+
+.detail-wrap dd {
+    color: #555;
 }
 
 .committee-wrap .detail-wrap span {
@@ -105,7 +116,13 @@ h3.tit-sub3 { background-color: #0074E5; }
 }
 
 .organization-group.country li {
+    padding: 12px 2px 12px 23px;
     font-weight: 700;
+}
+
+.organization-group.country li:nth-child(odd) {
+    background-color: #F6F5F6;
+    border-radius: 4px;
 }
 
 .organization-group.country, .organization-group.member {
@@ -115,13 +132,17 @@ h3.tit-sub3 { background-color: #0074E5; }
 }
 
 .organization-group li {
-    margin-bottom: 20px;
+    margin-bottom: 4px;
 }
 
-
 .member li {
-    display: flex; 
-    
+    display: flex;
+    padding: 12px 2px 12px 23px;
+}
+
+.organization-group.member li:nth-child(odd) {
+    background-color: #F6F5F6;
+    border-radius: 4px;
 }
 
 .member strong, .member span {
@@ -138,7 +159,7 @@ h3.tit-sub3 { background-color: #0074E5; }
 
 
 /* 모바일~테블릿 */
-@media screen and (max-width: 360px){
+@media screen and (max-width: 650px){
 
 }
 

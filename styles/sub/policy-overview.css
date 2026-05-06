@@ -15,34 +15,44 @@
 }
 
 .tap-btn-wrap button {
-    border-radius: 10px;
+    padding: 16px 12px;
+}
+
+.tap-btn-wrap .off {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #D0D5DD;
 }
 
 /* 표 */
 table {
     border-top: 2px solid #000;
     border-collapse: collapse;
+    margin-bottom: 48px;
 }
 
 thead {
     background-color: #F0F0F0;
 }
 
-thead tr th {
-    padding: 12px 16px
-}
-
-table tr {
-    border-bottom: 1px solid #F0F0F0;
+thead th {
+    padding: 12px 16px;
+    font-weight: 700;
 }
 
 table th {
     text-align: center;
 }
 
-table td {
+table tbody td {
     padding: 30px 16px;
     vertical-align: middle;
+    border-bottom: 1px solid #F0F0F0;
+    border-left: 1px solid #F0F0F0;
+}
+
+table tbody td:first-child {
+    border-left: 0 none;
 }
 
 table .table-division {
@@ -95,18 +105,6 @@ table td li::before {
     position: relative;
 }
 
-
-/* 테블릿~pc */
-@media screen and (min-width: 650px){
-    .tap-btn-wrap {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    table .table-division {
-        display: none;
-    }
-}
-
 /* 모바일~테블릿 */
 @media screen and (max-width: 650px){
     .tap-btn-wrap {
@@ -136,6 +134,14 @@ table td li::before {
         padding: 0;
     }
 
+    table tr td:last-child {
+        border-bottom: 1px solid #F0F0F0;
+    }
+
+    table tr:last-child td {
+        border-bottom: 0 none;
+    }
+
     table td ul {
         display: flex;
         flex-direction: column;
@@ -152,6 +158,23 @@ table td li::before {
         align-items: flex-start;
     }
 
+    table tbody td {
+        padding: 0;
+        border: 0;
+    }
+
+    
+}
+
+/* 테블릿~pc */
+@media screen and (min-width: 650px){
+    .tap-btn-wrap {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    table .table-division {
+        display: none;
+    }
 }
 
 /* pc */
