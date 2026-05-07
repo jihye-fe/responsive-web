@@ -8,10 +8,6 @@
     flex-direction: column;
 }
 
-.cont-info dd p {
-    
-}
-
 .cont-info dd button {
     background-color: #003675;
     color: #fff;
@@ -38,7 +34,7 @@
 }
 
 .banner-btn {
-    background-color: #ccc;
+    background:linear-gradient(135deg, #8B9BF9, #45B5DC, #46D2A9);
     margin-bottom: 24px;
     border-radius: 4px;
 }
@@ -46,6 +42,7 @@
 .banner-btn button {
     width: 100%;
     height: 56px;
+    color: #fff;
 }
 
 /* 폼 */
@@ -71,9 +68,9 @@
 
 .album-list .item dl .img-mask {
     width: 100%;
-    height: 120px;
     background-color: #ccc;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .album-list .item dl dd {

@@ -419,6 +419,19 @@ a:hover{
         box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
     }
 
+    .aside-wrap ul a {
+        display: block;
+        padding: 5px 0;
+        position: relative;
+    }
+
+    .aside-wrap ul svg {
+        position: absolute; right: 0; top: 8px;
+        width: 20px;
+        vertical-align: middle;
+        margin-left: auto;
+    }
+
     #main {
         padding-left: 40px;
         flex: 1;
