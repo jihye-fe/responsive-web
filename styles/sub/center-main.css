@@ -1,10 +1,23 @@
-.album-list dt {
-    font-weight: 700;
+.cont-info {
+    margin-bottom: 24px;
+}
+
+.total-cnt {
+    font-size: 15px;
     margin-bottom: 10px;
 }
 
-#main dd {
-    margin: 0;
+.album-list dt {
+    font-weight: 700;
+}
+
+.album-list dd {
+    font-size: 15px;
+    color: #555;
+}
+
+.album-list dd .tit {
+    color: #333;
 }
 
 .cont-info dd {
@@ -18,6 +31,7 @@
 
 .banner-btn {
     background-color: #ccc;
+    margin-bottom: 24px;
 }
 
 .banner-btn button {
@@ -25,31 +39,7 @@
     height: 56px;
 }
 
-/* 검색 폼 */
-fieldset {
-    padding: 32px 24px;
-    background-color: #F0F0F0;
-    border: 1px solid #D0D5DD;
-    border-radius: 10px;
-}
-
-fieldset dd {
-    display: none;
-}
-
-/* fieldset dt {
-    background-color: #fff;
-    border: 1px solid #D0D5DD;
-    border-radius: 5px;
-} */
-
-.area {
-    display: flex;
-}
-
-/* .area-search {
-    padding: 5px 50px 10px 5px;
-} */
+/* 폼 */
 
 /* 앨범 목록 */
 .album-list .item .label {
@@ -58,11 +48,16 @@ fieldset dd {
     margin-bottom: 20px;
     padding: 0 8px;
     border-radius: 4px;
-    background-color: #ccc;
+    background-color: #D2E7F3;
+    color: #246BE0;
 }
 
 .album-list .item dl dt {
     font-size: 19px;
+}
+
+#main .img-box {
+    margin: 20px 0;
 }
 
 .album-list .item dl .img-mask {
@@ -92,13 +87,15 @@ fieldset dd {
     width: 100%;
 }
 
-.album-list .item p button {
+.album-list .item p .sub-btn {
     width: 100%;
+    margin-top: 24px;
 }
 
 /* 말줄임 */
 .album-list .address {
     display: flex;
+    margin-top: 16px;
 }
 .album-list .address .detail {
     overflow: hidden;
