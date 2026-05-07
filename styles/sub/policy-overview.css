@@ -11,7 +11,7 @@
     grid-template-columns: repeat(6, 1fr);
     gap: 10px;
     width: 100%;
-    padding: 16px 12px;
+    margin-bottom: 36px;
 }
 
 .tap-btn-wrap button {
@@ -80,35 +80,38 @@ table td li::before {
 
 /* 청년정책 수립 */
 
-#main dt {
-    font-weight: 700;
-    margin-bottom: 10px;
+.build-guide-wrap dl {
+    padding: 32px 28px;
+    border: 1px solid #DCDBDC;
+    border-radius: 10px;
+    margin-top: 50px;
+    position: relative;
 }
 
-#main dd {
-    margin: 0;
+.build-guide-wrap dt {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .build-guide-wrap dd {
     display: flex;
     flex-direction: column;
+    font-size: 17px;
 }
 
 .build-guide-wrap dd div {
     text-align: center;
 }
 
-.build-guide-wrap button {
-    margin-top: 24px;
-    width: 100PX
+
+.build-guide-wrap p {
+    text-align: center;
 }
 
-.build-guide-wrap dl {
-    padding: 24px 20px;
-    border: 1px solid #DCDBDC;
-    border-radius: 10px;
-    margin-top: 50px;
-    position: relative;
+.build-guide-wrap button {
+    margin-top: 24px;
+    /* width: 100% */
 }
 
 /* 모바일~테블릿 */
@@ -169,6 +172,9 @@ table td li::before {
         border: 0;
     }
 
+    table tbody td:first-child {
+        text-align:left;
+    }
     
 }
 
@@ -181,15 +187,8 @@ table td li::before {
     table .table-division {
         display: none;
     }
-}
 
-/* pc */
-@media screen and (min-width: 1280px){
-    .tap-btn-wrap {
-        grid-template-columns: repeat(6, 1fr);
-    }
-
-        
+            
     .build-guide-wrap div {
         display: flex;
         gap: 10px;
@@ -200,6 +199,15 @@ table td li::before {
         width: 50%;
         padding: 40px 48px;
     }
+}
+
+/* pc */
+@media screen and (min-width: 1280px){
+    .tap-btn-wrap {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+
 
     
 }

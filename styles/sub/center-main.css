@@ -1,5 +1,22 @@
 .cont-info {
     margin-bottom: 24px;
+    position: relative;
+}
+
+.cont-info dd {
+    display: flex;
+    flex-direction: column;
+}
+
+.cont-info dd p {
+    
+}
+
+.cont-info dd button {
+    background-color: #003675;
+    color: #fff;
+    padding: 10px;
+    position: absolute; right: 36px;
 }
 
 .total-cnt {
@@ -20,18 +37,10 @@
     color: #333;
 }
 
-.cont-info dd {
-    display: flex;
-    flex-direction: column;
-}
-
-.cont-info dd button {
-    margin-top: 10px;
-}
-
 .banner-btn {
     background-color: #ccc;
     margin-bottom: 24px;
+    border-radius: 4px;
 }
 
 .banner-btn button {

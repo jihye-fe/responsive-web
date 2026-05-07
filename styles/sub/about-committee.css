@@ -28,11 +28,33 @@
     font-weight: 700;
 }
 
+.detail-wrap .detail-tit1::before {
+    /* content: "❶"; */
+    content: "1";
+    display: inline-block;
+    background-color: #d0d5dd;
+    padding: 0 10px;
+    border-radius: 100%;
+    color: #fff;
+    margin-right: 8px;
+}
+.detail-wrap .detail-tit2::before {
+    /* content: "❶"; */
+    content: "2";
+    display: inline-block;
+    background-color: #d0d5dd;
+    padding: 0 10px;
+    border-radius: 100%;
+    color: #fff;
+    margin-right: 8px;
+}
+
 .committee-wrap .detail-wrap .etc-detail {
     padding: 24px;
     margin: 24px 0 32px 0;
     background-color: #f6f5f6;
     border-radius: 10px;
+    font-size: 17px;
 }
 
 .committee-wrap .detail-wrap dt {
@@ -47,7 +69,16 @@
 .committee-wrap .detail-wrap span {
     font-size: 18px;
     font-weight: 400;
-    margin-left: 5px;
+    margin-left: 8px;
+}
+
+
+.committee-wrap .top-area {
+    padding: 12px 44px;
+    background-color: #D0D5DD;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
 }
 
 .committee-wrap .top-area dt {
@@ -55,15 +86,26 @@
     font-size: 24px;
 }
 
-.committee-wrap .top-area {
-    padding: 12px 22px;
-    background-color: #D0D5DD;
-    border-radius: 10px 10px 0 0;
+.committee-wrap .top-area dd {
+    margin-left: 8px;
 }
 
 /* 청년정책조정위원회 */
 .organization-wrap {
     margin: 64px 0;
+}
+
+.organization-wrap .top {
+    width: 212px;
+    height: 212px;
+    /* padding-right: 24px 36px; */
+    margin: 12px auto 91px;
+    background-color: #ccc;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 212px;
+    font-size: 21px;
+    font-weight: 700;
 }
 
 .organization {
@@ -77,6 +119,7 @@
 .organization dt {
     font-weight: 700;
     font-size: 19px;
+    margin-right: 12px;
 }
 
 #main h3 {
@@ -175,8 +218,4 @@ h3.tit-sub3 { background-color: #0074E5; }
         justify-content: center;
         align-items: center;
     }
-
-    /* .organization-wrap  */
-
-
 }
