@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Escoredream';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: 400;
+    font-size: 16px;
+    font-display: swap;
+}
+
+* { font-family: 'Escoredream'; }
+
+/* .img-mask {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+} */
+
+.login-area {
+    padding: 20px;
+    background-color: #F2F4FA;
+    border-radius: 22px;
+}
+
+.login-area .desc {
+    padding: 0 20px 20px 20px;
+}
+
+.login-area .desc .stress {
+    font-weight: 700;
+}
+
+.login-area .etc {
+    display: flex;
+}
+
+.login-area .etc p {
+    padding: 14px 10px;
+    margin-top: 16px;
+}
+
+
+.login-area .btn {
+    width: 100%;
+}
+
+.login-area .main-btn {
+    width: 100%;
+}
