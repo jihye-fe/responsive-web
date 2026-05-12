@@ -14,7 +14,7 @@
     background-color: red;
 } */
 
-.login-area {
+/* .login-area {
     padding: 20px;
     background-color: #F2F4FA;
     border-radius: 22px;
@@ -44,4 +44,162 @@
 
 .login-area .main-btn {
     width: 100%;
+} */
+
+#main {
+    padding: 0 24px;
+}
+
+/* 배너 영역 */
+.banner-wrap {
+    width: 100%;
+    position: relative;
+    margin-top: 80px;
+}
+
+.banner-wrap .img-mask {
+    padding-top: calc(460 / 1180 * 100%);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner-wrap .img-mask img {
+    position: absolute; left: 0; top: 0;
+}
+
+.banner-wrap p {
+    position: absolute; right: 4px; bottom: 4px;
+    z-index: 10;
+    padding: 4px 12px;
+    background-color: #fff;
+    border: 1px solid #D0D5DD;
+    border-radius: 58px;
+    /* font-weight: 700; */
+}
+
+.banner-wrap p .now-page {
+    color: #F3557F;
+}
+
+.login-search {
+    display: flex;
+}
+
+/* 로그인 영역 */
+.login-area strong, .search-area strong {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+.login-area .login-box, .search-area .search-ranking {
+    margin-top: 16px;
+}
+
+.login-area {
+    margin-top: 80px;
+}
+
+.login-area .login-box {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    border: 3px solid #D0D5DD;
+    border-radius: 30px;
+}
+
+.login-area .login-box span {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.login-area .login-box button {
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    padding: 16px 25px;;
+}
+
+/* 검색 및 순위 */
+.search-area {
+    margin-top: 80px;
+}
+
+.search-area .search-ranking {
+    padding: 24px;
+    border: 4px solid #D0D5DD;
+    border-radius: 20px;
+}
+
+.search-area .search-box {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.search-area input {
+    border: 0 none;
+}
+
+.search-area .search-box button {
+    /* background-color: lightblue; */
+    width: 50px;
+    height: 100%;
+    position: absolute; top: 0; right: 0;
+}
+
+.search-area dt {
+    padding: 8px 0;
+    margin: 24px 0 16px 0;
+    font-weight: 700;
+}
+
+.search-area dl dd {
+    margin-bottom: 16px;
+}
+
+.search-area dl dd:last-child {
+    margin-bottom: 0;
+}
+
+.search-area dl dd .num {
+    display: inline-block;
+    color: #246BE0;
+    border: 1px solid #246BE0;
+    padding: 2px 10px;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.search-area dl dd {
+    display: flex;
+}
+
+.search-area dl dd .desc {
+    flex: 1;
+    flex-shrink: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.search-area dl dd .arrow {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    text-align: center;
+}
+
+.search-area dl dd .arrow.up {
+    color: #FF0000;
+}
+
+.search-area dl dd .arrow.down {
+    color: #0066FF;
+}
+
+.search-area .search-box svg {
+    color: #246BE0;
+    width: 30px;
 }
