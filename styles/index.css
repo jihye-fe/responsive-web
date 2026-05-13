@@ -46,29 +46,29 @@
     width: 100%;
 } */
 
-#main {
+/* #main {
     padding: 0 24px;
-}
+} */
 
 /* 배너 영역 */
-.banner-wrap {
+.banner-area {
     width: 100%;
     position: relative;
     margin-top: 80px;
 }
 
-.banner-wrap .img-mask {
+.banner-area .img-mask {
     padding-top: calc(460 / 1180 * 100%);
     border-radius: 10px;
     overflow: hidden;
     position: relative;
 }
 
-.banner-wrap .img-mask img {
+.banner-area .img-mask img {
     position: absolute; left: 0; top: 0;
 }
 
-.banner-wrap p {
+.banner-area p {
     position: absolute; right: 4px; bottom: 4px;
     z-index: 10;
     padding: 4px 12px;
@@ -78,13 +78,57 @@
     /* font-weight: 700; */
 }
 
-.banner-wrap p .now-page {
+.banner-area p button {
+    background-color: #F9F9F9;
+    border-radius: 90px;
+}
+
+.banner-area p .page {
+    margin-right: 18px;
+}
+
+/* .banner-area p .now-page {
+    color: #F3557F;
+} */
+
+.swiper-pagination-current {
     color: #F3557F;
 }
 
-.login-search {
-    display: flex;
+/* 스와이퍼 */
+body {
+    position: relative;
+    height: 100%;
 }
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1180/460;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/* .login-search {
+    display: flex;
+} */
 
 /* 로그인 영역 */
 .login-area strong, .search-area strong {
@@ -114,6 +158,10 @@
     font-weight: 700;
 }
 
+.login-area .login-box input {
+    border-radius: 8px;
+}
+
 .login-area .login-box button {
     width: 100%;
     height: 100%;
@@ -135,7 +183,8 @@
 .search-area .search-box {
     display: flex;
     width: 100%;
-    position: relative;
+    border-radius: 8px;
+    border: 1px solid #D9D9D9;
 }
 
 .search-area input {
@@ -145,8 +194,6 @@
 .search-area .search-box button {
     /* background-color: lightblue; */
     width: 50px;
-    height: 100%;
-    position: absolute; top: 0; right: 0;
 }
 
 .search-area dt {
@@ -202,4 +249,54 @@
 .search-area .search-box svg {
     color: #246BE0;
     width: 30px;
+}
+
+/* 모바일~테블릿 */
+@media screen and (max-width: 650px){
+
+}
+
+/* 테블릿~pc */
+@media screen and (min-width: 650px){
+    .banner-area p {
+        position: absolute; right: 16px; bottom: 16px;
+        padding: 8px 16px;
+    }
+}
+
+/* pc */
+@media screen and (min-width: 1280px){
+    .login-search {
+        display: flex;
+        gap: 50px;
+    }
+
+    .search-area {
+        width: 70%;
+    }
+
+    .login-area {
+        width: 40%;
+    }
+
+   .container {
+        display: block;
+    }
+
+   #main {
+        padding-left: 0;
+    }
+
+
+    .search-ranking {
+        position: relative;
+    }
+    .search-area dt {
+        margin: 0 0 16px 0;
+        padding: 0;
+    }
+    .search-area .search-box {
+        position: absolute; top: 16px; right: 24px;
+        max-width: 60%;
+    }
 }

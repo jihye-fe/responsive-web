@@ -6,8 +6,10 @@
     <title>페이지 제목 | 사이트명</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard.css">
     <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="styles/index.css">
-    <script src="scripts/sub/서브페이지명.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="scripts/index.js" defer></script>
 </head>
 <body>
 
@@ -17,9 +19,19 @@
         </aside><!-- // #aside End -->
         <section id="main">
             <!-- 배너 영역 -->
-            <div class="banner-wrap">
-                <p><span class="now-page">3 </span>/ 4<!--<button><</button><button>></button>--></p>
-                <div class="img-mask"><a href=""><img src="images/placeholder_main_banner.png" alt=""></a></div>
+            <div class="banner-area swiper mySwiper">
+                <p>
+                    <!-- <span class="page"><span class="now-page">3 </span>/ 4</span> -->
+                    <span class="page"></span>
+                    <button class="icon-m prev"><</button>
+                    <button class="icon-m next">></button>
+                </p>
+                <div class="banner-wrap swiper-wrapper">
+                    <div class="img-mask swiper-slide"><a href=""><img src="images/placeholder_main_banner.png" alt=""></a></div>
+                    <div class="img-mask swiper-slide"><a href=""><img src="images/placeholder_main_banner_2.png" alt=""></a></div>
+                    <div class="img-mask swiper-slide"><a href=""><img src="images/placeholder_main_banner_3.png" alt=""></a></div>
+                    <div class="img-mask swiper-slide"><a href=""><img src="images/placeholder_main_banner_4.png" alt=""></a></div>
+                </div>
             </div>
 
             <div class="login-search">
@@ -43,20 +55,7 @@
                     </p>
                 </div> -->
 
-                <div class="login-area">
-                    <strong>로그인</strong>
-                    <div class="login-box">
-                        <div>
-                            <span>아이디</span>
-                            <input type="text" name="id" id="id" placeholder="영문 소문자">
-                        </div>
-                        <div>
-                            <span>비밀번호</span>
-                            <input type="password" name="password" id="password" placeholder="9-24자의 영문자, 숫자, 특수문자 조합">
-                        </div>
-                        <p><button class="main-btn">로그인</button></p>
-                    </div>
-                </div>
+
 
                 <!-- 검색 및 순위 -->
                 <div class="search-area">
@@ -103,7 +102,47 @@
                                 <span class="desc">청년도전지원사업</span>
                                 <span class="arrow down">↓</span>
                             </dd>
+                            <dd>
+                                <span class="num">6</span>
+                                <span class="desc">심리상담 바우처 사업(구 전국민 마음투자 지원사업)</span>
+                                <span class="arrow stay">-</span>
+                            </dd>
+                            <dd>
+                                <span class="num">7</span>
+                                <span class="desc">2026년 청년도전지원사업(원주시)</span>
+                                <span class="arrow up">↑</span>
+                            </dd>
+                            <dd>
+                                <span class="num">8</span>
+                                <span class="desc">대전청년챔프</span>
+                                <span class="arrow up">↑</span>
+                            </dd>
+                            <dd>
+                                <span class="num">9</span>
+                                <span class="desc">청년 네트워크 활성화 지원사업</span>
+                                <span class="arrow down">↓</span>
+                            </dd>
+                            <dd>
+                                <span class="num">9</span>
+                                <span class="desc">대학생 연합생활관(은행권,고양)</span>
+                                <span class="arrow down">↓</span>
+                            </dd>
                         </dl>
+                    </div>
+                </div>
+
+                <div class="login-area">
+                    <strong>로그인</strong>
+                    <div class="login-box">
+                        <div>
+                            <span>아이디</span>
+                            <input type="text" name="id" id="id" placeholder="영문 소문자">
+                        </div>
+                        <div>
+                            <span>비밀번호</span>
+                            <input type="password" name="password" id="password" placeholder="9-24자의 영문자, 숫자, 특수문자 조합">
+                        </div>
+                        <p><button class="main-btn">로그인</button></p>
                     </div>
                 </div>
             </div>
