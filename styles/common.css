@@ -152,12 +152,24 @@ button {
     position: relative;
     flex-shrink: 0;
     width: 100%;
-    padding: 10px 0;
+    
     text-align: center;
     border-bottom: 5px solid #E4E7EB;
+}   
+
+.sub-tab ul li a {
+    font-weight: 700; color:#666;
+    display: block;
+    padding: 10px 0;
 }
 
-.sub-tab ul li a { font-weight: 700; color:#666;}
+.tab-detail {
+    display: none;
+}
+
+.tab-detail.on {
+    display: block;
+}
 
 .sub-tab ul li:hover::after {
   transform: scaleX(1); /* 호버 시 나타남 */

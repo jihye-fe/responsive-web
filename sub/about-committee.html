@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard.css">
     <link rel="stylesheet" href="../styles/common.css">
     <link rel="stylesheet" href="../styles/sub/about-committee.css">
+    <script src="../scripts/common.js" defer></script>
     <script src="scripts/sub/서브페이지명.js" defer></script>
 </head>
 <body>
@@ -39,86 +40,90 @@
             <!-- 탭. -->
             <div class="sub-tab">
                 <ul class="">
-                    <li class="on"><a href="">구성체계</a></li>
-                    <li><a href="">청년정책조정위원회</a></li>
+                    <li class="sub-tab-btn on"><a href="#">구성체계</a></li>
+                    <li class="sub-tab-btn"><a href="#">청년정책조정위원회</a></li>
                 </ul>
             </div>
 
             <!-- 구성체계 -->
-            <h2 class="blind">구성체계</h2>
-            <div class="committee-wrap">
-                <dl class="top-area">
-                    <dt>청년정책조정위원회</dt>
-                    <dd>(위원장 : 국무총리 / 부위원장 : 정부 1, 민간 1 / 위원장 포함 40인 이내)</dd>
-                </dl>
-                <div class="detail-wrap">
-                    <dl>
-                        <dt class="detail-tit1">당연직</dt>
-                        <dd>국무총리(1), 중앙부처* 장관(18), 지자체 협의체 추천 지자체장(광역1, 기초1)</dd>
-                        <dd class="etc-detail">*재경부 · 과기부 · 교육부 · 통일부 · 법무부 · 행안부 · 문체부 · 농식품부 · 산업부 · 복지부 · 고용부 · 성평등부 · 국토부 · 중기부 · 기예처 장관 및 금융위원장 · 국무조정실장(청년기본법) + 국방부장관(시행령)</dd>
+            <div class="tab-detail on">
+                <h2 class="blind">구성체계</h2>
+                <div class="committee-wrap">
+                    <dl class="top-area">
+                        <dt>청년정책조정위원회</dt>
+                        <dd>(위원장 : 국무총리 / 부위원장 : 정부 1, 민간 1 / 위원장 포함 40인 이내)</dd>
                     </dl>
-                    <dl>
-                        <dt class="detail-tit2">위촉직<span>위촉직의 30%를 청년을 대표하는 사람으로 위촉(시행령 근거)</span></dt>
-                        <dd>청년정책 전문가 또는 청년단체 대표 등 청년을 대표하는 사람</dd>
+                    <div class="detail-wrap">
+                        <dl>
+                            <dt class="detail-tit1">당연직</dt>
+                            <dd>국무총리(1), 중앙부처* 장관(18), 지자체 협의체 추천 지자체장(광역1, 기초1)</dd>
+                            <dd class="etc-detail">*재경부 · 과기부 · 교육부 · 통일부 · 법무부 · 행안부 · 문체부 · 농식품부 · 산업부 · 복지부 · 고용부 · 성평등부 · 국토부 · 중기부 · 기예처 장관 및 금융위원장 · 국무조정실장(청년기본법) + 국방부장관(시행령)</dd>
+                        </dl>
+                        <dl>
+                            <dt class="detail-tit2">위촉직<span>위촉직의 30%를 청년을 대표하는 사람으로 위촉(시행령 근거)</span></dt>
+                            <dd>청년정책 전문가 또는 청년단체 대표 등 청년을 대표하는 사람</dd>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="committee-wrap">
+                    <dl class="top-area">
+                        <dt>실무위원회</dt>
+                        <dd>(위원장 : 국무조정실장 / 부위원장 : 정부 1, 민간 1 / 위원장 포함 20인 이내) 실무위원회</dd>
                     </dl>
+                    <div class="detail-wrap">
+                        <dl>
+                            <dt class="detail-tit1">당연직</dt>
+                            <dd>국조실장(1), 관계 중앙부처* 차관(7), 조정위원회 위원이 소속된 지자체 부단체장으로서 해당 기관의 장이 지명(광역1, 기초1)</dd>
+                            <dd class="etc-detail">*재경부 · 교육부 · 복지부 · 고용부 · 국토부 · 중기부 차관 및 국무조정실 국무1차장</dd>
+                        </dl>
+                        <dl>
+                            <dt class="detail-tit2">위촉직</dt>
+                            <dd>청년정책 전문가 또는 청년단체 대표 등 청년을 대표하는 사람 위촉직</dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
 
-            <div class="committee-wrap">
-                <dl class="top-area">
-                    <dt>실무위원회</dt>
-                    <dd>(위원장 : 국무조정실장 / 부위원장 : 정부 1, 민간 1 / 위원장 포함 20인 이내) 실무위원회</dd>
-                </dl>
-                <div class="detail-wrap">
-                    <dl>
-                        <dt class="detail-tit1">당연직</dt>
-                        <dd>국조실장(1), 관계 중앙부처* 차관(7), 조정위원회 위원이 소속된 지자체 부단체장으로서 해당 기관의 장이 지명(광역1, 기초1)</dd>
-                        <dd class="etc-detail">*재경부 · 교육부 · 복지부 · 고용부 · 국토부 · 중기부 차관 및 국무조정실 국무1차장</dd>
+            <div class="tab-detail">
+                <!-- 청년정책조정위원회 -->
+                <h2 class="blind">청년정책조정위원회</h2>
+                <div class="organization-wrap">
+                    <dl class="organization">
+                        <dt>구성</dt>
+                        <dd>위원장(국무총리), 부위원장 포함 40명 이내</dd>
                     </dl>
-                    <dl>
-                        <dt class="detail-tit2">위촉직</dt>
-                        <dd>청년정책 전문가 또는 청년단체 대표 등 청년을 대표하는 사람 위촉직</dd>
-                    </dl>
-                </div>
-            </div>
+                    
+                    <p class="top"><span>위원장 국무총리</span></p>
 
-            <!-- 청년정책조정위원회 -->
-            <h2 class="blind">청년정책조정위원회</h2>
-            <div class="organization-wrap">
-                <dl class="organization">
-                    <dt>구성</dt>
-                    <dd>위원장(국무총리), 부위원장 포함 40명 이내</dd>
-                </dl>
-                
-                <p class="top"><span>위원장 국무총리</span></p>
-
-                <div class="sub-group1">
-                    <h3 class="tit-sub1">부위원장</h3>
-                    <ul class="organization-group vice">
-                        <li>정부 국무조정실장</li>
-                        <li>민간</li>
-                    </ul>
-                </div>
-                <div class="sub-bottom-group">
-                    <div class="sub-group2">
-                        <h3 class="tit-sub2">정부위원(5)</h3>
-                        <ul class="organization-group country">
-                            <li>국무조정실장 (부위원장)</li>
-                            <li>재정경제부 장관</li>
-                            <li>교육부 장관</li>
-                            <li>통일부 장관</li>
-                            <li>법무부 장관</li>
+                    <div class="sub-group1">
+                        <h3 class="tit-sub1">부위원장</h3>
+                        <ul class="organization-group vice">
+                            <li>정부 국무조정실장</li>
+                            <li>민간</li>
                         </ul>
                     </div>
-                    <div class="sub-group3">
-                        <h3 class="tit-sub3">민간위원(5)</h3>
-                        <ul class="organization-group member">
-                            <li><strong>김요한</strong><span>(지역과 인재 대표)</span></li>
-                            <li><strong>김진희</strong><span>(한국교육개발원 선임연구위원)</span></li>
-                            <li><strong>박이슬</strong><span>(한국해외봉사단원연합회 대외협력이사)</span></li>
-                            <li><strong>정창원</strong><span>(정창원공인중개사사무소 대표)</span></li>
-                            <li><strong>최용석</strong><span>(창업진흥원 차장)</span></li>
-                        </ul>
+                    <div class="sub-bottom-group">
+                        <div class="sub-group2">
+                            <h3 class="tit-sub2">정부위원(5)</h3>
+                            <ul class="organization-group country">
+                                <li>국무조정실장 (부위원장)</li>
+                                <li>재정경제부 장관</li>
+                                <li>교육부 장관</li>
+                                <li>통일부 장관</li>
+                                <li>법무부 장관</li>
+                            </ul>
+                        </div>
+                        <div class="sub-group3">
+                            <h3 class="tit-sub3">민간위원(5)</h3>
+                            <ul class="organization-group member">
+                                <li><strong>김요한</strong><span>(지역과 인재 대표)</span></li>
+                                <li><strong>김진희</strong><span>(한국교육개발원 선임연구위원)</span></li>
+                                <li><strong>박이슬</strong><span>(한국해외봉사단원연합회 대외협력이사)</span></li>
+                                <li><strong>정창원</strong><span>(정창원공인중개사사무소 대표)</span></li>
+                                <li><strong>최용석</strong><span>(창업진흥원 차장)</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
