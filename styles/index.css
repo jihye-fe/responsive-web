@@ -290,6 +290,13 @@ body {
 
     .login-area {
         width: 40%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .login-area .login-box {
+        flex: 1;
+        margin-top: 0;
     }
 
    .container {
