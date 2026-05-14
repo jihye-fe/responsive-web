@@ -69,22 +69,28 @@
 }
 
 .banner-area p {
-    position: absolute; right: 4px; bottom: 4px;
+    position: absolute; right: 8px; bottom: 8px;
     z-index: 10;
     padding: 4px 12px;
     background-color: #fff;
     border: 1px solid #D0D5DD;
     border-radius: 58px;
     /* font-weight: 700; */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
 }
 
 .banner-area p button {
     background-color: #F9F9F9;
     border-radius: 90px;
+    flex-shrink: 0;
+    color: #777777;
 }
 
-.banner-area p .page {
-    margin-right: 18px;
+.banner-area p .icon-m.swiper-button-disabled {
+    color: #b3b3b3;
 }
 
 /* .banner-area p .now-page {
@@ -202,28 +208,34 @@ body {
     font-weight: 700;
 }
 
-.search-area dl dd {
+.search-area dl ol:first-child {
     margin-bottom: 16px;
 }
 
-.search-area dl dd:last-child {
+.search-area dl ol li {
+    margin-bottom: 16px;
+    display: flex;
+    gap: 8px;
+}
+
+.search-area dl ol li:last-child {
     margin-bottom: 0;
 }
 
-.search-area dl dd .num {
+.search-area dl ol li .num {
     display: inline-block;
     color: #246BE0;
     border: 1px solid #246BE0;
-    padding: 2px 10px;
     border-radius: 4px;
-    margin-right: 8px;
+    text-align: center;
+    line-height: 32px;
 }
 
-.search-area dl dd {
+/* .search-area dl dd {
     display: flex;
-}
+} */
 
-.search-area dl dd .desc {
+.search-area dl ol li .desc {
     flex: 1;
     flex-shrink: 0;
     white-space: nowrap;
@@ -231,18 +243,18 @@ body {
     text-overflow: ellipsis;
 }
 
-.search-area dl dd .arrow {
+.search-area dl ol li .arrow {
     display: inline-block;
     width: 23px;
     height: 23px;
     text-align: center;
 }
 
-.search-area dl dd .arrow.up {
+.search-area dl ol li .arrow.up {
     color: #FF0000;
 }
 
-.search-area dl dd .arrow.down {
+.search-area dl ol li .arrow.down {
     color: #0066FF;
 }
 
@@ -253,13 +265,14 @@ body {
 
 /* 모바일~테블릿 */
 @media screen and (max-width: 650px){
-
+    .banner-area p button {
+        display: none;
+    }
 }
 
 /* 테블릿~pc */
 @media screen and (min-width: 650px){
     .banner-area p {
-        position: absolute; right: 16px; bottom: 16px;
         padding: 8px 16px;
     }
 }
@@ -292,11 +305,21 @@ body {
         position: relative;
     }
     .search-area dt {
-        margin: 0 0 16px 0;
+        margin: 0 0 20px 0;
         padding: 0;
     }
     .search-area .search-box {
         position: absolute; top: 16px; right: 24px;
         max-width: 60%;
+    }
+    .search-area dd {
+        display: flex;
+        gap: 30px;
+    }
+    .search-area dl ol {
+        width: calc(50% - 15px);
+    }
+    .search-area dl ol:first-child {
+        margin: 0;
     }
 }

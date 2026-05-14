@@ -23,8 +23,18 @@
                 <p>
                     <!-- <span class="page"><span class="now-page">3 </span>/ 4</span> -->
                     <span class="page"></span>
-                    <button class="icon-m prev"><</button>
-                    <button class="icon-m next">></button>
+                    <button class="icon-m prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                            <path fill-rule="evenodd" d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z" clip-rule="evenodd" />
+                        </svg>
+                        <span class="blind">이전</span>
+                    </button>
+                    <button class="icon-m next">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                            <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+                        </svg>
+                        <span class="blind">다음</span>
+                    </button>
                 </p>
                 <div class="banner-wrap swiper-wrapper">
                     <div class="img-mask swiper-slide"><a href=""><img src="images/placeholder_main_banner.png" alt=""></a></div>
@@ -63,10 +73,7 @@
                     <div class="search-ranking">
                         <div class="search-box">
                             <input type="text" name="search" id="search" placeholder="검색어를 입력해주세요">
-                            <button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-    <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z" clip-rule="evenodd" />
-    </svg>
-    </button>
+                            <button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6"><path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z" clip-rule="evenodd" /></svg></button>
                         </div>
                         <!-- <span>인기 검색어 TOP10</span>
                         <span>1</span>
@@ -76,6 +83,115 @@
                         <span>청년문화예술패스</span>
                         <span>↓</span> -->
                         <dl>
+                            <dt>인기 검색어 TOP10</dt>
+                            <dd>
+                                <ol>
+                                    <li>
+                                        <span class="num icon-m">1</span>
+                                        <span class="desc">(국토부) 26년 청년월세 지원사업</span>
+                                        <span class="arrow up icon-s">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                            <path fill-rule="evenodd" d="M11.47 2.47a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 1 1-1.06 1.06l-6.22-6.22V21a.75.75 0 0 1-1.5 0V4.81l-6.22 6.22a.75.75 0 1 1-1.06-1.06l7.5-7.5Z" clip-rule="evenodd" />
+                                            </svg>
+                                            <span class="blind">순위 상승</span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="num icon-m">2</span>
+                                        <span class="desc">청년문화예술패스</span>
+                                        <span class="arrow down icon-s">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                            <path fill-rule="evenodd" d="M12 2.25a.75.75 0 0 1 .75.75v16.19l6.22-6.22a.75.75 0 1 1 1.06 1.06l-7.5 7.5a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 1 1 1.06-1.06l6.22 6.22V3a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd" />
+                                            </svg>
+                                            <span class="blind">순위 하락</span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="num icon-m">3</span>
+                                        <span class="desc">케이-아트(K-Art) 청년 창작자 지원</span>
+                                        <span class="arrow stay icon-s">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                            <path fill-rule="evenodd" d="M4.25 12a.75.75 0 0 1 .75-.75h14a.75.75 0 0 1 0 1.5H5a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+                                            </svg>
+                                            <span class="blind">순위 유지</span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="num icon-m">4</span>
+                                        <span class="desc">취업 대비 자격증 등 시험응시료 지원 1212q3123123</span>
+                                        <span class="arrow up icon-s">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                            <path fill-rule="evenodd" d="M11.47 2.47a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 1 1-1.06 1.06l-6.22-6.22V21a.75.75 0 0 1-1.5 0V4.81l-6.22 6.22a.75.75 0 1 1-1.06-1.06l7.5-7.5Z" clip-rule="evenodd" />
+                                            </svg>
+                                            <span class="blind">순위 상승</span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="num icon-m">5</span>
+                                        <span class="desc">청년도전지원사업</span>
+                                        <span class="arrow down icon-s">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                                <path fill-rule="evenodd" d="M12 2.25a.75.75 0 0 1 .75.75v16.19l6.22-6.22a.75.75 0 1 1 1.06 1.06l-7.5 7.5a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 1 1 1.06-1.06l6.22 6.22V3a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd" />
+                                            </svg>
+                                            <span class="blind">순위 하락</span>
+                                        </span>
+                                    </li>
+                                </ol>
+                                <ol>
+                                    <li>
+                                        <span class="num icon-m">6</span>
+                                        <span class="desc">심리상담 바우처 사업(구 전국민 마음투자 지원사업)</span>
+                                        <span class="arrow stay icon-s">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                            <path fill-rule="evenodd" d="M4.25 12a.75.75 0 0 1 .75-.75h14a.75.75 0 0 1 0 1.5H5a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+                                            </svg>
+                                            <span class="blind">순위 유지</span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="num icon-m">7</span>
+                                        <span class="desc">2026년 청년도전지원사업(원주시)</span>
+                                        <span class="arrow up icon-s">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                            <path fill-rule="evenodd" d="M11.47 2.47a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 1 1-1.06 1.06l-6.22-6.22V21a.75.75 0 0 1-1.5 0V4.81l-6.22 6.22a.75.75 0 1 1-1.06-1.06l7.5-7.5Z" clip-rule="evenodd" />
+                                            </svg>
+                                            <span class="blind">순위 상승</span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="num icon-m">8</span>
+                                        <span class="desc">대전청년챔프</span>
+                                        <span class="arrow up icon-s">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                            <path fill-rule="evenodd" d="M11.47 2.47a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 1 1-1.06 1.06l-6.22-6.22V21a.75.75 0 0 1-1.5 0V4.81l-6.22 6.22a.75.75 0 1 1-1.06-1.06l7.5-7.5Z" clip-rule="evenodd" />
+                                            </svg>
+                                            <span class="blind">순위 상승</span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="num icon-m">9</span>
+                                        <span class="desc">청년 네트워크 활성화 지원사업</span>
+                                        <span class="arrow down icon-s">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                                <path fill-rule="evenodd" d="M12 2.25a.75.75 0 0 1 .75.75v16.19l6.22-6.22a.75.75 0 1 1 1.06 1.06l-7.5 7.5a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 1 1 1.06-1.06l6.22 6.22V3a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd" />
+                                            </svg>
+                                            <span class="blind">순위 하락</span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="num icon-m">10</span>
+                                        <span class="desc">대학생 연합생활관(은행권,고양)</span>
+                                        <span class="arrow down icon-s">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                                <path fill-rule="evenodd" d="M12 2.25a.75.75 0 0 1 .75.75v16.19l6.22-6.22a.75.75 0 1 1 1.06 1.06l-7.5 7.5a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 1 1 1.06-1.06l6.22 6.22V3a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd" />
+                                            </svg>
+                                            <span class="blind">순위 하락</span>
+                                        </span>
+                                    </li>
+                                </ol>
+                            </dd>
+                        </dl>
+                        <!-- <dl>
                             <dt>인기 검색어 TOP10</dt>
                             <dd>
                                 <span class="num">1</span>
@@ -123,11 +239,11 @@
                                 <span class="arrow down">↓</span>
                             </dd>
                             <dd>
-                                <span class="num">9</span>
+                                <span class="num">10</span>
                                 <span class="desc">대학생 연합생활관(은행권,고양)</span>
                                 <span class="arrow down">↓</span>
                             </dd>
-                        </dl>
+                        </dl> -->
                     </div>
                 </div>
 
