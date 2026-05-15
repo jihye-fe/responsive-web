@@ -28,3 +28,7 @@ subTabBtns.forEach(function(btn, inx){
         tabDetails[inx].classList.add("on")
     })
 })
+
+// 사이드바 열림접힘 표시
+const asideWrap = document.querySelector(".aside-wrap")
+const isSub = asideWrap.querySelector(".is-sub")

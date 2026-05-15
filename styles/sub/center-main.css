@@ -1,6 +1,5 @@
 .cont-info {
     margin-bottom: 24px;
-    position: relative;
 }
 
 .cont-info dd {
@@ -12,7 +11,7 @@
     background-color: #003675;
     color: #fff;
     padding: 10px;
-    position: absolute; right: 36px;
+    margin-top: 8px;
 }
 
 .total-cnt {
@@ -46,6 +45,9 @@
 }
 
 /* 폼 */
+.sub-search-area .keyword dl:last-child dt {
+    margin-right: 8px;
+}
 
 /* 앨범 목록 */
 .album-list .item .label {
@@ -121,5 +123,16 @@
 
 /* 테블릿~pc */
 @media screen and (min-width: 650px){
+    .cont-info {
+        position: relative;
+    }
 
+    .cont-info dd {
+        width: 70%;
+    }
+
+    .cont-info dd button {
+        position: absolute; right: 36px;
+        margin-top: 0;
+    }
 }
