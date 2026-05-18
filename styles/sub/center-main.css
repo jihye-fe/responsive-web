@@ -14,6 +14,10 @@
     margin-top: 8px;
 }
 
+.cont-info dd button:hover {
+    text-decoration: underline;
+}
+
 .total-cnt {
     font-size: 15px;
     margin-bottom: 10px;
@@ -47,6 +51,11 @@
 /* 폼 */
 .sub-search-area .keyword dl:last-child dt {
     margin-right: 8px;
+}
+
+.sub-search-area .keyword {
+    display: flex;
+    gap: 30px;
 }
 
 /* 앨범 목록 */

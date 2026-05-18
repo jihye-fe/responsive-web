@@ -132,15 +132,18 @@ body {
 
 
 
-/* .login-search {
-    display: flex;
-} */
+.login-search {
+    margin-bottom: 80px;
+}
 
 /* 로그인 영역 */
 .login-area strong, .search-area strong {
     font-size: 25px;
     font-weight: 700;
     margin-bottom: 16px;
+}
+.search-area strong span {
+    font-weight: 400;
 }
 .login-area .login-box, .search-area .search-ranking {
     margin-top: 16px;
@@ -245,12 +248,10 @@ body {
 
 .search-area dl ol li .arrow {
     display: inline-block;
-    width: 23px;
-    height: 23px;
     text-align: center;
 }
 
-.search-area dl ol li .arrow.up {
+.search-area dl ol li .arrow .up {
     color: #FF0000;
 }
 
@@ -281,11 +282,11 @@ body {
 @media screen and (min-width: 1280px){
     .login-search {
         display: flex;
-        gap: 50px;
+        gap: 40px;
     }
 
     .search-area {
-        width: 70%;
+        width: 65%;
     }
 
     .login-area {

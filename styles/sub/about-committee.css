@@ -120,6 +120,9 @@
     font-weight: 700;
     font-size: 19px;
     margin-right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 #main h3 {
