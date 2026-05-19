@@ -1,26 +1,15 @@
 // 탭
 const subTab = document.querySelector(".sub-tab");
-const subTabBtns = document.querySelectorAll(".sub-tab-btn"); // li가 둘 이상, querySelectorAll 사용
-const tabDetails = document.querySelectorAll(".tab-detail") // 둘 이상, querySelectorAll 사용
-
-// const subTabBtns = document.querySelectorAll(".sub-tab-btn");  >> 이렇게 사용해야함
-// const tabDetails = document.querySelectorAll(".tab-detail")
-
-// tabDetails[inx].classList.add("on");
-
-// 1. 각 li가 다 클릭 대상이 되게 >> subTabBtns.forEach((대상,인덱스)=>{
-//})
-
-//     // 탭메뉴, 디테일= on 클래스 모두 제거
-//     // on 클래스 생성
+const subTabBtns = document.querySelectorAll(".sub-tab-btn");
+const tabDetails = document.querySelectorAll(".tab-detail")
 
 subTabBtns.forEach(function(btn, inx){
     btn.addEventListener("click", function(b){
-        b.preventDefault(); // 링크 안 열게 막기
+        b.preventDefault();
         subTabBtns.forEach(function(b){
-            b.classList.remove("on") // 클래스 먼저 다 제거
+            b.classList.remove("on")
         })
-        subTabBtns[inx].classList.add("on"); // 내가 누른 거(inx) 만 add
+        subTabBtns[inx].classList.add("on");
     
         tabDetails.forEach(function(b){
             b.classList.remove("on")

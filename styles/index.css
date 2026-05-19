@@ -8,48 +8,6 @@
 
 * { font-family: 'Escoredream'; }
 
-/* .img-mask {
-    width: 100%;
-    height: 100%;
-    background-color: red;
-} */
-
-/* .login-area {
-    padding: 20px;
-    background-color: #F2F4FA;
-    border-radius: 22px;
-}
-
-.login-area .desc {
-    padding: 0 20px 20px 20px;
-}
-
-.login-area .desc .stress {
-    font-weight: 700;
-}
-
-.login-area .etc {
-    display: flex;
-}
-
-.login-area .etc p {
-    padding: 14px 10px;
-    margin-top: 16px;
-}
-
-
-.login-area .btn {
-    width: 100%;
-}
-
-.login-area .main-btn {
-    width: 100%;
-} */
-
-/* #main {
-    padding: 0 24px;
-} */
-
 /* 배너 영역 */
 .banner-area {
     width: 100%;
@@ -75,7 +33,6 @@
     background-color: #fff;
     border: 1px solid #D0D5DD;
     border-radius: 58px;
-    /* font-weight: 700; */
     display: flex;
     align-items: center;
     gap: 8px;
@@ -92,10 +49,6 @@
 .banner-area p .icon-m.swiper-button-disabled {
     color: #b3b3b3;
 }
-
-/* .banner-area p .now-page {
-    color: #F3557F;
-} */
 
 .swiper-pagination-current {
     color: #F3557F;
@@ -131,6 +84,10 @@ body {
 }
 
 
+.login-search-wrap {
+    background: linear-gradient(0deg, rgba(210, 231, 243, 1) 0%, rgba(255, 255, 255, 1) 40%);
+    padding-bottom: 40px;
+}
 
 .login-search {
     margin-bottom: 80px;
@@ -160,6 +117,7 @@ body {
     gap: 28px;
     border: 3px solid #D0D5DD;
     border-radius: 30px;
+    background-color: #fff;
 }
 
 .login-area .login-box span {
@@ -187,6 +145,7 @@ body {
     padding: 24px;
     border: 4px solid #D0D5DD;
     border-radius: 20px;
+    background-color: #fff;
 }
 
 .search-area .search-box {
@@ -233,10 +192,6 @@ body {
     text-align: center;
     line-height: 32px;
 }
-
-/* .search-area dl dd {
-    display: flex;
-} */
 
 .search-area dl ol li .desc {
     flex: 1;
