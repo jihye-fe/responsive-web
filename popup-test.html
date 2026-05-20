@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘 하루 팝업 창 닫기</title>
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <style>
+        * {
+            padding: 0; margin: 0;
+            box-sizing: border-box;
+        }
+        
+        input{
+            /* appearance: none; */
+            display: none;
+        }
+
+        .popup-wrap {
+            position: fixed;
+            left: 0; right: 0;
+            top: 0; bottom: 0;
+            z-index: 100;
+            background-color: rgba(0, 0, 0, 0.7);
+            /* width: 100%;
+            height: 100vh; 화면의높이? */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-box {
+            /* width: 400px; */
+            width: 60%;
+            /* height: 400px; */
+            background-color: white;
+            display: flex;
+            flex-direction: column; /* row */
+            /* position: relative; */
+        }
+
+        .popup-box .close-btn {
+            /* position: absolute; right: 0; top: 0; */
+        }
+
+        .popup-box .cont { flex: 1; display: flex; }
+        .popup-box .cont img { width: 100%;}
+        .popup-box .controls { font-size: 15px; display: flex; gap: 8px; }
+        .popup-box .controls div { padding: 12px 20px; background-color: blanchedalmond; border-radius: 40px;}
+        
+        /* 체크박스 배경 생성 */
+        .popup-box label::before {
+            content: "";
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background: url(images/icon/check-box.svg) no-repeat;
+            background-size: 25px 25px;
+        }
+
+        .popup-box label.check::before {
+            background-image: url(images/icon/check-box-on.svg);
+        }
+        
+
+        /* 스와이퍼 */
+
+        html, body {
+        position: relative;
+        }
+
+        .swiper {
+        width: 100%;
+        height: 100%;
+        }
+
+        .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #444;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="popup-wrap"> <!-- 검은 화면 -->
+        <div class="popup-box"> <!-- 팝업, 버튼 감싸는 -->
+            <div class="popup-area swiper mySwiper"> <!-- 팝업 영역 -->
+                <div class="cont swiper-wrapper">
+                    <div class="img-mask swiper-slide"><img src="images/alt-img/square.png"></div>
+                    <div class="img-mask swiper-slide"><img src="images/alt-img/square.png"></div>
+                </div>
+            </div>
+            <div class="controls">
+                    <div>
+                        <label>
+                            <input type="checkbox">
+                            오늘 하루 팝업 창 안보기
+                        </label>
+                    </div>
+                    <div>
+                        <button class="close-btn"><img src="images/icon/close.svg" alt="닫기" class="icon-m">닫기</button>
+                    </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <script>
+        // 현재 시간 < 종료 시간(2026,5,15,23,59,59)
+        const today = new Date();
+        // console.log(today);
+        const year = today.getFullYear();
+        const month = today.getMonth();
+        const date = today.getDate();
+
+        const popupWrap = document.querySelector(".popup-wrap");
+        const closeBtn = popupWrap.querySelector(".close-btn");
+        const checkBox = popupWrap.querySelector("input");
+        const label = popupWrap.querySelector("label");
+        // 닫기 버튼 클릭
+        closeBtn.addEventListener("click", function(){
+
+            if(checkBox.checked){
+                // 오늘 자정전까지만 팝업 숨기기 (팝업이 종료되는 시간)
+                const endDate = new Date(year, month, date, 15, 57, 59);
+
+                // 로컬스토리지에 저장
+                localStorage.setItem("popupEnd", endDate);
+            }
+            popupWrap.style.display = "none"
+        });
+
+        // 체크박스 off/on - change
+        checkBox.addEventListener("change", function(){
+            console.log(checkBox.checked); // true 또는 false
+            if(checkBox.checked){
+                label.classList.add("check");
+            }else{
+                label.classList.remove("check");
+            }
+        })
+
+        const popupEnd = localStorage.getItem("popupEnd");
+        if(popupEnd){
+            // 저장된 시간
+            const endDate = new Date(popupEnd);
+
+            if(today < endDate){
+                popupWrap.style.display = "none";
+            }
+        }
+
+        // 스와이퍼
+        var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        });
+    </script>
+</body>
+</html>
