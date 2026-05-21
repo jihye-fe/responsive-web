@@ -26,28 +26,55 @@
             background-color: rgba(0, 0, 0, 0.7);
             /* width: 100%;
             height: 100vh; 화면의높이? */
+            display: flex;
             justify-content: center;
             align-items: center;
         }
 
         .popup-box {
-            /* width: 400px; */
-            width: 60%;
-            /* height: 400px; */
+            width: 400px;
             background-color: white;
             display: flex;
             flex-direction: column; /* row */
             /* position: relative; */
+            padding: 0 10px;
+        }
+    
+        .popup-box .popup-tit {
+            font-size: 35px;
+            font-weight: 700;
+            margin: 0 auto 30px;
+        }
+
+        .popup-box .popup-area {
+            width: 100%;
+            aspect-ratio: 1 / 1 ;
         }
 
         .popup-box .close-btn {
             /* position: absolute; right: 0; top: 0; */
+            color: #fff;
+            display: flex;
+            align-items: center;
         }
 
         .popup-box .cont { flex: 1; display: flex; }
-        .popup-box .cont img { width: 100%;}
-        .popup-box .controls { font-size: 15px; display: flex; gap: 8px; }
-        .popup-box .controls div { padding: 12px 20px; background-color: blanchedalmond; border-radius: 40px;}
+        .popup-box .cont .img-mask {
+            padding-top: calc(361 / 361 * 100%);
+            overflow: hidden;
+            position: relative;
+        }
+        .popup-box .cont .img-mask img {
+            width: 100%;
+            position: absolute; left: 0; top: 0;
+        }
+        .popup-box .controls { font-size: 15px; display: flex; gap: 8px;  }
+        .popup-box .controls .btn { padding: 12px 20px; background-color: #000; border-radius: 40px; color: #fff; }
+       
+        .popup-box .controls .btn label {
+            display: flex;
+            align-items: center;
+        }
         
         /* 체크박스 배경 생성 */
         .popup-box label::before {
@@ -55,12 +82,12 @@
             display: inline-block;
             width: 25px;
             height: 25px;
-            background: url(images/icon/check-box.svg) no-repeat;
+            background: url(images/icon/check-box-w.svg) no-repeat;
             background-size: 25px 25px;
         }
 
         .popup-box label.check::before {
-            background-image: url(images/icon/check-box-on.svg);
+            background-image: url(images/icon/check-box-on-w.svg);
         }
         
 
@@ -91,33 +118,43 @@
         object-fit: cover;
         }
 
+        .swiper-button-next, .swiper-button-prev {
+            background-color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 60px;
+            padding: 10px;
+            border: 1px solid #D0D5DD;
+        }
+
     </style>
 
 </head>
 <body>
     <div class="popup-wrap"> <!-- 검은 화면 -->
-        <div class="popup-box"> <!-- 팝업, 버튼 감싸는 -->
-            <div class="popup-area swiper mySwiper"> <!-- 팝업 영역 -->
-                <div class="cont swiper-wrapper">
-                    <div class="img-mask swiper-slide"><img src="images/alt-img/square.png"></div>
-                    <div class="img-mask swiper-slide"><img src="images/alt-img/square.png"></div>
+            <div class="popup-box"> <!-- 팝업, 버튼(전부) 감싸는 -->
+                <p class="popup-tit">온통청년 POPUP</p>
+                <div class="popup-area swiper mySwiper"> <!-- 팝업 영역 -->
+                    <div class="cont swiper-wrapper">
+                        <div class="img-mask swiper-slide"><img src="images/popup/1.jpg"></div>
+                        <div class="img-mask swiper-slide"><img src="images/popup/2.png"></div>
+                    </div>
                 </div>
+                <div class="controls">
+                        <div class="btn">
+                            <label>
+                                <input type="checkbox">
+                                오늘 하루 팝업 창 안보기
+                            </label>
+                        </div>
+                        <div class="btn">
+                            <button class="close-btn"><img src="images/icon/close-w.svg" alt="닫기" class="icon-s">닫기</button>
+                        </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
             </div>
-            <div class="controls">
-                    <div>
-                        <label>
-                            <input type="checkbox">
-                            오늘 하루 팝업 창 안보기
-                        </label>
-                    </div>
-                    <div>
-                        <button class="close-btn"><img src="images/icon/close.svg" alt="닫기" class="icon-m">닫기</button>
-                    </div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-        </div>
     </div>
 
     <script>
@@ -171,7 +208,7 @@
         centeredSlides: true,
         autoplay: {
             delay: 2500,
-            disableOnInteraction: false,
+            disableOnInteraction: true,
         },
         pagination: {
             el: ".swiper-pagination",
