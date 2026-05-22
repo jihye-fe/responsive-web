@@ -18,9 +18,34 @@
             
         </aside><!-- // #aside End -->
         <section id="main">
-            <!-- 배너 영역 -->
+            <div class="popup-wrap"> <!-- 검은 화면 -->
+                    <div class="popup-box"> <!-- 팝업, 버튼(전부) 감싸는 -->
+                        <p class="popup-tit">온통청년 POPUP</p>
+                        <div class="popup-area swiper popup-swiper"> <!-- 팝업 영역 -->
+                            <div class="cont swiper-wrapper">
+                                <div class="img-mask swiper-slide"><img src="images/popup/1.jpg"></div>
+                                <div class="img-mask swiper-slide"><img src="images/popup/2.png"></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="controls">
+                                <div class="btn">
+                                    <label>
+                                        <input type="checkbox">
+                                        오늘 하루 팝업 창 안보기
+                                    </label>
+                                </div>
+                                <div class="btn">
+                                    <button class="close-btn"><img src="images/icon/close-w.svg" alt="닫기" class="icon-s">닫기</button>
+                                </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+            </div>
+
             <div class="inner banner">
-                <div class="banner-area swiper mySwiper">
+                <div class="banner-area swiper banner-swiper">
                     <p class="page-num-area">
                         <span class="page"></span>
                         <button class="icon-m prev">
@@ -182,6 +207,5 @@
             </div>
         </section><!-- // #main End -->
     </div><!-- // .container End -->
-
 </body>
 </html>

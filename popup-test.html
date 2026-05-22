@@ -13,8 +13,7 @@
             box-sizing: border-box;
         }
         
-        input{
-            /* appearance: none; */
+        .popup-wrap input{
             display: none;
         }
 
@@ -31,7 +30,7 @@
             align-items: center;
         }
 
-        .popup-box {
+        .popup-wrap .popup-box {
             width: 400px;
             /* background-color: white; */
             display: flex;
@@ -40,45 +39,42 @@
             padding: 0 10px;
         }
     
-        .popup-box .popup-tit {
+        .popup-wrap .popup-box .popup-tit {
             font-size: 35px;
             font-weight: 700;
             margin: 0 auto 30px;
             color: #fff;
         }
 
-        .popup-box .popup-area {
+        .popup-wrap .popup-box .popup-area {
             width: 100%;
-            aspect-ratio: 1 / 1 ;
         }
 
-        .popup-box .close-btn {
-            /* position: absolute; right: 0; top: 0; */
+        .popup-wrap .popup-box .close-btn {
             color: #fff;
             display: flex;
             align-items: center;
+            font-size: 15px;
         }
 
-        .popup-box .cont { flex: 1; display: flex; }
-        .popup-box .cont .img-mask {
-            padding-top: calc(361 / 361 * 100%);
+        .popup-wrap .popup-box .cont { flex: 1; display: flex; }
+        .popup-wrap .popup-box .cont .img-mask {
             overflow: hidden;
             position: relative;
         }
-        .popup-box .cont .img-mask img {
+        .popup-wrap .popup-box .cont .img-mask img {
             width: 100%;
-            position: absolute; left: 0; top: 0;
         }
-        .popup-box .controls { font-size: 15px; display: flex; gap: 8px; justify-content: space-around; }
-        .popup-box .controls .btn { padding: 12px 20px; background-color: #000; border-radius: 40px; color: #fff; }
+        .popup-wrap .popup-box .controls { font-size: 15px; display: flex; gap: 16px; justify-content: center; }
+        .popup-wrap .popup-box .controls .btn { padding: 12px 20px; background-color: #000; border-radius: 40px; color: #fff; }
        
-        .popup-box .controls .btn label {
+        .popup-wrap .popup-box .controls .btn label {
             display: flex;
             align-items: center;
         }
         
         /* 체크박스 배경 생성 */
-        .popup-box label::before {
+        .popup-wrap .popup-box label::before {
             content: "";
             display: inline-block;
             width: 25px;
@@ -87,7 +83,7 @@
             background-size: 25px 25px;
         }
 
-        .popup-box label.check::before {
+        .popup-wrap .popup-box label.check::before {
             background-image: url(images/icon/check-box-on-w.svg);
         }
         
@@ -98,12 +94,12 @@
         position: relative;
         }
 
-        .swiper {
+        .popup-wrap .swiper {
         width: 100%;
         height: 100%;
         }
 
-        .swiper-slide {
+        .popup-wrap .swiper-slide {
         text-align: center;
         font-size: 18px;
         background: #444;
@@ -112,35 +108,52 @@
         align-items: center;
         }
 
-        .swiper-slide img {
+        .popup-wrap .swiper-slide img {
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
         }
 
-        .swiper-button-next, .swiper-button-prev {
+        .popup-wrap .swiper-button-next, .swiper-button-prev {
             background-color: #fff;
             width: 60px;
             height: 60px;
             border-radius: 60px;
             padding: 10px;
             border: 1px solid #D0D5DD;
-        } 
+            color: #333;
+        }
 
-        .popup-box .swiper-pagination {
+        .popup-wrap .swiper-button-prev.swiper-button-disabled {
+            display: none;
+        }
+        .popup-wrap .swiper-button-next.swiper-button-disabled {
+            display: none;
+        }
+
+        .popup-wrap .popup-box .swiper-pagination {
             position: relative;
             bottom: 0;
             margin: 15px 0;
         }
 
-        .popup-box .swiper-pagination-bullet {
+        .popup-wrap .popup-box .swiper-pagination-bullet {
             background: #999;
         }
 
-        .popup-box .swiper-pagination-bullet-active {
+        .popup-wrap .popup-box .swiper-pagination-bullet-active {
             background: #fff;
         }
+
+        /* 테블릿~pc */
+        @media screen and (min-width: 650px){
+            .popup-wrap .popup-box { width: 800px; }
+            .popup-wrap .swiper-button-prev, .popup-wrap .swiper-button-next {
+                display: none;
+            }
+        }
+
 
     </style>
 
@@ -149,13 +162,13 @@
     <div class="popup-wrap"> <!-- 검은 화면 -->
             <div class="popup-box"> <!-- 팝업, 버튼(전부) 감싸는 -->
                 <p class="popup-tit">온통청년 POPUP</p>
-                <div class="popup-area swiper mySwiper"> <!-- 팝업 영역 -->
+                <div class="popup-area swiper popup-swiper"> <!-- 팝업 영역 -->
                     <div class="cont swiper-wrapper">
                         <div class="img-mask swiper-slide"><img src="images/popup/1.jpg"></div>
                         <div class="img-mask swiper-slide"><img src="images/popup/2.png"></div>
                     </div>
+                    <div class="swiper-pagination"></div>
                 </div>
-                <div class="swiper-pagination"></div>
                 <div class="controls">
                         <div class="btn">
                             <label>
@@ -218,7 +231,7 @@
         }
 
         // 스와이퍼
-        var swiper = new Swiper(".mySwiper", {
+        var swiper = new Swiper(".popup-swiper", {
         spaceBetween: 30,
         centeredSlides: true,
         autoplay: {
@@ -226,12 +239,19 @@
             disableOnInteraction: true,
         },
         pagination: {
-            el: ".swiper-pagination",
+            el: ".popup-swiper .swiper-pagination",
             clickable: true,
         },
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".popup-wrap .swiper-button-next",
+            prevEl: ".popup-wrap .swiper-button-prev",
+        },
+        breakpoints: {
+            650 : {
+                slidesPerView: 2,
+                navigation: false,
+                centeredSlides: false
+            }
         },
         });
     </script>
