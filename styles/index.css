@@ -234,6 +234,10 @@ body {
 }
 
 /* 로그인 영역 */
+.login-area fieldset, .search-ranking fieldset {
+    border: 0 none;
+}
+
 .login-area strong, .search-area strong {
     font-size: 25px;
     font-weight: 700;
@@ -247,17 +251,27 @@ body {
 }
 
 .login-area {
+    display: flex;
     margin-top: 80px;
 }
 
+.login-area form {
+    flex: 1;
+}
+.login-area fieldset {
+    height: 100%;
+}
+
 .login-area .login-box {
+    border: 3px solid #D0D5DD;
+    border-radius: 20px;
+    background-color: #fff;
+}
+.login-area .login-inner {
     padding: 24px;
     display: flex;
     flex-direction: column;
     gap: 28px;
-    border: 3px solid #D0D5DD;
-    border-radius: 20px;
-    background-color: #fff;
 }
 
 .login-area .login-box span {
